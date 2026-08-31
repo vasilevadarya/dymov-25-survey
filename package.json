@@ -1,0 +1,17 @@
+{
+  "name": "dymov-25-survey-timeweb",
+  "version": "2.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node scripts/validate.mjs"
+  },
+  "dependencies": {
+    "express": "4.22.2",
+    "pg": "8.17.0"
+  }
+}

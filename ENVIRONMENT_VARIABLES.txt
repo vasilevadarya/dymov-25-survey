@@ -1,0 +1,14 @@
+TIMEWEB APP PLATFORM — ПЕРЕМЕННЫЕ ОКРУЖЕНИЯ
+============================================
+
+DB_HOST=<PostgreSQL host>
+DB_PORT=5432
+DB_NAME=default_db
+DB_USER=<PostgreSQL user>
+DB_PASSWORD=<PostgreSQL password>
+DATABASE_SSL=true
+DATABASE_SSL_REJECT_UNAUTHORIZED=false
+ADMIN_USER=admin
+ADMIN_PASSWORD=<long unique admin password>
+
+Никогда не добавляйте реальные пароли в Git, README или этот файл.

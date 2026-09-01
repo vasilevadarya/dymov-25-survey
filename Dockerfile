@@ -11,6 +11,6 @@ RUN node scripts/validate.mjs
 ENV NODE_ENV=production
 ENV PORT=8080
 EXPOSE 8080
-HEALTHCHECK --interval=30s --timeout=5s --start-period=15s --retries=3 \
-  CMD node -e "fetch('http://127.0.0.1:8080/live').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"
+HEALTHCHECK --interval=15s --timeout=5s --start-period=30s --retries=5 \
+  CMD wget -q -O /dev/null http://127.0.0.1:8080/live || exit 1
 CMD ["node", "server/index.js"]

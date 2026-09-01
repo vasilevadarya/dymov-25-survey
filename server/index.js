@@ -321,6 +321,9 @@ app.disable('x-powered-by');
 app.use(securityHeaders);
 app.use(express.json({ limit:'96kb', type:'application/json' }));
 
+app.get('/live', (req,res) => {
+  res.status(200).json({ok:true,service:'dymov-25-survey'});
+});
 app.get('/health', async (req,res) => {
   try { await pool.query('SELECT 1'); res.status(200).json({ok:true,service:'dymov-25-survey',database:'ok'}); }
   catch { res.status(503).json({ok:false,service:'dymov-25-survey',database:'unavailable'}); }
